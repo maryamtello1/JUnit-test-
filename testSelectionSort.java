@@ -24,10 +24,18 @@ Sortedarr[1] = 7;
 Sortedarr[2] = 8;
 Sortedarr[3] = 9;
 Sortedarr[4] = 10;
-/** add tests to check for this unit test **/
+SelectionSort sorter = new SelectionSort();
+
+int[] expectedArr = sorter.basicSelectionSort(arr);
+assertArrayEquals(Sortedarr, expectedArr);
 }
 public void testNegative(){
 /** Test data contains negative values only **/
+int[] arr = {-5, -10, -3, -1, -8};
+    SelectionSort sorter = new SelectionSort();
+    int[] sortedArr = sorter.basicSelectionSort(arr);
+    int[] expectedArr = {-10, -8, -5, -3, -1};
+    assertArrayEquals(expectedArr, sortedArr);
 }
 public void testMixed(){
 /** Test data contains with both positive, negative and zeros **/
