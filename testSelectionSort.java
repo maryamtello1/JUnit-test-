@@ -31,8 +31,18 @@ public void testNegative(){
 }
 public void testMixed(){
 /** Test data contains with both positive, negative and zeros **/
+int[] arr = {-5, 10, 0, -1, 3};
+    SelectionSort sorter = new SelectionSort();
+    int[] sortedArr = sorter.basicSelectionSort(arr);
+    int[] expectedArr = {-5, -1, 0, 3, 10};
+    assertArrayEquals(expectedArr, sortedArr);
 }
 public void testDuplicates(){
 /** Test data contains duplicates **/
+int[] arr = {10, 5, 20, 10, 30};
+    SelectionSort sorter = new SelectionSort();
+    int[] sortedArr = sorter.basicSelectionSort(arr);
+    int[] expectedArr = {5, 10, 10, 20, 30};
+    assertArrayEquals(expectedArr, sortedArr);
 }
 }
